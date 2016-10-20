@@ -39,12 +39,16 @@ body <- dashboardBody(
     ),
     column(width = 4,
            box(width = NULL, title="Control Panel", status = "primary", solidHeader=TRUE,
-               selectInput("selection", "Choose a book:", choices = sherlock.books, selected=sherlock.books[1], multiple=TRUE),
+               selectInput("selection", "Choose book(s):", choices = sherlock.books, selected=sherlock.books[1], multiple=TRUE),
                p(
                  class = "text-muted",
-                 "Click on the drop-down above to the right of the book name. Use the Ctrl key to select additional books. 
-                       Remove a book by selecting it and pressing the delete key. Scroll to see the full list of books."
-                ),
+                 tags$ul(
+                   tags$li("Click in the box above to the right of the book name"), 
+                   tags$li("Use the Ctrl key to select additional books"), 
+                   tags$li("Remove a book by selecting it and pressing the delete key"),
+                   tags$li("Scroll to see the full list of books")
+                 )
+                 ),
                hr(),
                sliderInput("min.freq",
                            "Minimum Word Frequency:",
