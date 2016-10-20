@@ -8,7 +8,7 @@ library(plotly)
 
 # Create list of books for multi-select input "Choose a Book" in ui.R
 sherlock.books <<- list.files(path="./books", pattern = "pdf$") 
- 
+
 # output$cloud in server.R reactively sends list of books chosen in ui.R
 # pdf's loaded from books directory
 makeWordCloud <- function(book){
@@ -37,6 +37,9 @@ makeWordCloud <- function(book){
   freq <- sort(colSums(as.matrix(dtm)), decreasing=TRUE)   
   return(freq)
 }
+
+
+
 
 # Parse out text input words with their corresponding frequency into a dataframe
 # Called in the render plot function

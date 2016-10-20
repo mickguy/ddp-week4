@@ -1,0 +1,76 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE }
+source("pdfminer.R")
+
+```
+
+
+Developing Data Products Week 4 Assignment
+========================================================
+title: Developing Data Products Week 4 Assignment
+author: Mick Guy
+date: October 19, 2016
+autosize: true
+css: styles.css
+
+Sherlock Word Cloud
+========================================================
+type: exclaim
+
+
+  ![wordcloud based on a Sherlock Holmes story](wordcloud_m.png)
+  
+  ***
+  
+  - A fun app to create word clouds from Sherlock Holmes stories.
+  - Select a single story or multiple stories
+  - Input custom words
+  - Adjust the frequency of the words displayed.
+  - Adjust the maximum number of words displayed 
+
+Calculating the Term Document Matrix
+========================================================
+type: exclaim
+
+The Term Document Matrix describes the frequency of terms that occur in a collection of documents. 
+```{r echo=TRUE}
+
+table.frequent.terms <- function (tdm, min.freq=20, max.freq=Inf){
+  ft <- findFreqTerms(tdm, lowfreq = min.freq , highfreq = max.freq)
+  ft.tdm <- data.frame(as.matrix(tdm[ft,]))
+  colnames(ft.tdm) <- c("Doc A", "Doc B", "Doc C", "Doc D")
+  return(ft.tdm)
+}
+```
+
+
+Term Document Matrix - Result
+========================================================
+type: exclaim
+
+Columns correspond to documents in the collection and rows correspond to terms.
+```{r echo=TRUE}
+table.frequent.terms(tdm, min.freq=40)
+
+```
+
+References 
+========================================================
+type: header
+
+  Fork on Github    
+  https://github.com/mickguy/ddp-week4   
+  
+  Text Mining   
+    http://bit.ly/1n0DxTE 
+       
+  UI Layout    
+    http://shiny.rstudio.com/gallery/bus-dashboard.html   
+     
+  Sliders   
+    http://shiny.rstudio.com/gallery/word-cloud.html   
+     
+    

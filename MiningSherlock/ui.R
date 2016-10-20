@@ -63,7 +63,11 @@ body <- dashboardBody(
                  class = "text-muted",
                  "The maximum number of words is dependent on the word frequency. A high frequency may not result in a sufficient number of available words."
                ),
-               hr()
+               hr(),
+               p(
+                 a(href="https://github.com/mickguy/ddp-week4", "Fork on Github")
+               )
+               
             
            )
     )

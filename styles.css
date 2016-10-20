@@ -1,0 +1,24 @@
+/* styles.css */
+
+.exclaim .reveal .state-background {
+  background: #333333;
+} 
+
+.exclaim .reveal h1,
+.exclaim .reveal h2,
+.exclaim .reveal h3,
+.exclaim .reveal p, 
+.exclaim .reveal li {
+  color: white;
+}
+
+.header .reveal h3 {
+  background-color: #777777;
+  color: #ffffff;
+  height:1.2em;
+  text-indent:.4em; 
+}
+
+.charc {
+background-color: #333333;
+}
