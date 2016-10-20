@@ -64,13 +64,13 @@ type: header
   Fork on Github    
   https://github.com/mickguy/ddp-week4   
   
-  Text Mining   
+  Basic Text Mining   
     http://bit.ly/1n0DxTE 
        
-  UI Layout    
+  UI Layout inspired by    
     http://shiny.rstudio.com/gallery/bus-dashboard.html   
      
-  Sliders   
+  Frequency and Max Word Sliders inspired by   
     http://shiny.rstudio.com/gallery/word-cloud.html   
      
     
